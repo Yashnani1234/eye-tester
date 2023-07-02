@@ -1,4 +1,5 @@
 import { Component } from "react";
+import {Link} from 'react-router-dom' ;
 import './index.css';
 
 class Home extends Component {
@@ -10,6 +11,10 @@ class Home extends Component {
 
   agreeButton = () => {
     this.setState({agree:true})
+  }
+
+  nextButton = () => {
+    this.setState({check:false,agree:false})
   }
 
   render() {
@@ -33,10 +38,10 @@ class Home extends Component {
               <li>i follow</li>
             </ul>
           </div>
-          <input type="checkbox" onChange={this.onCheck} />
+          <input type="checkbox" checked={check} onChange={this.onCheck} />
           <div>
           {check ? <button onClick={this.agreeButton}>Agree</button> : <p>Agree</p>}
-          {agree ? <button>Next</button> : null}
+          {agree ? <Link to='/cam'><button onClick={this.nextButton}>Next</button></Link> : null}
           </div>
       </div>
       </>

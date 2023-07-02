@@ -1,13 +1,13 @@
 .main-container {
-    background-color:cornflowerblue;
+    background-color:rgb(1, 37, 27);
 }
 .main-heading {
-    color: rgb(17, 0, 255);
+    color: rgb(0, 200, 255);
     text-align: center;
 }
 .heading {
-    color: rgb(71, 71, 244);
+    color: rgb(244, 16, 16);
 }
 .diseases-container{
-    color: black;
+    color: rgb(236, 199, 199);
 }

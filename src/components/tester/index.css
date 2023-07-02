@@ -1,0 +1,12 @@
+.tmaincont {
+    background-color:rgb(1, 36, 26);
+}
+.prec {
+    color: rgb(236, 199, 199);
+}
+.img {
+    position:absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
