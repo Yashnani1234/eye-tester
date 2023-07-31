@@ -1,12 +1,30 @@
 .tmaincont {
-    background-color:rgb(1, 36, 26);
+    margin: 10px;
+    background-image: url(./eyeimage1.jpg);
+    height: 100vh;
+    background-size: cover;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 .prec {
-    color: rgb(236, 199, 199);
+    color: rgb(57, 33, 33);
 }
-.img {
-    position:absolute;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+.clickbutton {
+    color: rgb(16, 13, 13);
+    padding: 5px;
 }
+.maincont {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(131, 131, 131, 0.651), rgba(255, 255, 255, 0.642)), url('eyeimage1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+

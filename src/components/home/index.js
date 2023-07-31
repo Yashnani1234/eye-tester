@@ -1,12 +1,22 @@
 import { Component } from "react";
-import {Link} from 'react-router-dom' ;
 import './index.css';
-
 class Home extends Component {
-  state = {check:false,agree:false}
+  state = {check:false,check1:false,check2:false,agree:false}
 
-  onCheck = (event) => {
-    this.setState({check:event.target.checked})
+  onCheck1 = (event) => {
+    const {check2} = this.state
+    this.setState({check1:event.target.checked})
+    if(check2) {
+      this.setState({check:event.target.checked})
+    }
+  }
+
+  onCheck2 = (event) => {
+    const {check1} = this.state
+    this.setState({check2:event.target.checked})
+    if(check1) {
+      this.setState({check:event.target.checked})
+    }
   }
 
   agreeButton = () => {
@@ -14,11 +24,13 @@ class Home extends Component {
   }
 
   nextButton = () => {
-    this.setState({check:false,agree:false})
+    const {history} = this.props
+    this.setState({check1:false,check2:false,agree:false})
+    history.replace('/cam');
   }
 
   render() {
-    const {check,agree} = this.state
+    const {check,check1,check2,agree} = this.state
     console.log("rendered")
     return (
       <>
@@ -26,22 +38,41 @@ class Home extends Component {
         <h1 className='main-heading'>Eye Tester</h1>
         <div className='diseases-container'>
           <h1 className='heading'>Diseases can be found</h1>
-          <ul>
-            <li>head ache</li>
-            <li>brain tumor</li>
-          </ul>
+          <ol className='diseases'>
+            <li>    Aneurysm</li>
+            <li>    Brain Tumor</li>
+            <li>    Blood,tissue cancers</li>
+            <li>    Diabetes</li>
+            <li>    Giant cell arteritis</li>
+            <li>    Heart disease</li>
+            <li>    High bp</li>
+            <li>    High cholestrol</li>
+            <li>    Lupus</li>
+            <li>    Lymedisease</li>
+            <li>    Medication toxicities</li>
+            <li>    Multiple sclerosis</li>
+            <li>    Myasthenia gravis</li>
+            <li>    Rheumatoid arthritis</li>
+            <li>    Sarcoidosis</li>
+            <li>    Thyroid disease</li>
+            <li>    Vascular disease</li>
+            <li>    Vitamin A deficiency</li>
+          </ol>
         </div>
         <div className='diseases-container'>
             <h1 className='heading'>terms and conditions</h1>
-            <ul>
-              <li>i accept</li>
-              <li>i follow</li>
-            </ul>
+            <div className="terms">
+              <input type="checkbox" checked={check1} onChange={this.onCheck1} />
+              <p>i accept</p>
+            </div>
+            <div className="terms">
+              <input type="checkbox" checked={check2} onChange={this.onCheck2} />
+              <p>i follow</p>
+            </div>
           </div>
-          <input type="checkbox" checked={check} onChange={this.onCheck} />
           <div>
           {check ? <button onClick={this.agreeButton}>Agree</button> : <p>Agree</p>}
-          {agree ? <Link to='/cam'><button onClick={this.nextButton}>Next</button></Link> : null}
+          {agree ? <button onClick={this.nextButton}>Next</button> : null}
           </div>
       </div>
       </>

@@ -1,13 +1,28 @@
 .main-container {
+    margin: 5px;
     background-color:rgb(1, 37, 27);
 }
 .main-heading {
     color: rgb(0, 200, 255);
+    background-color: bisque;
+    padding: 50px;
     text-align: center;
 }
 .heading {
     color: rgb(244, 16, 16);
+    text-align: center;
 }
 .diseases-container{
     color: rgb(236, 199, 199);
+    background-color: black;
+}
+.diseases {
+    color: rgb(236, 199, 199);
+    background-color: black;
+    text-decoration: dotted;
+    text-rendering: geometricPrecision;
+}
+
+.terms {
+    display: flex;
 }
