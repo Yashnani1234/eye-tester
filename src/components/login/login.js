@@ -32,6 +32,8 @@ function Login(){
     };
     return (
       <div className='maincontainer'>
+      <h2 className='heading'><strong>OculaScanner</strong></h2>
+      
       <div className='d-flex justify-content-center align-items-center  vh-100' >
           <div className='bg-white p-3 rounded w-25'>
           <h2><strong> Login</strong></h2>
