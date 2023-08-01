@@ -22,6 +22,21 @@ app.post("/signup", (req, res) => {
     return res.json(data);
   });
 });
+app.post("/login", (req, res) => {
+  const sql = "SELECT * FROM signin WHERE 'email'= ? AND  'password' = ?";
+  const values = [req.body.email,req.body.username, req.body.password] ;
+
+  db.query(sql,req.body.username, req.body.password , (err, data) => {
+    if (err) 
+    {return res.json("error");}
+    if(data.length >0){
+      return res.json("success");
+    }
+    else{
+      return res.json("failed");
+    }
+  });
+});
 
 app.listen(3306, () => {
   console.log("Listening on port 8080...");

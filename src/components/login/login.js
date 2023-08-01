@@ -25,7 +25,12 @@ function Login(){
       // ) {
       axios.post('http://localhost:3306/login',data)
       .then((res) => {
+        if(res.data==="success"){
         history("/cam");
+        }
+        else{
+          alert("no record exist");
+        }
       })
        .catch(err => console.log(err));
     // }
