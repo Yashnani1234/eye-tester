@@ -1,21 +1,25 @@
-import { BrowserRouter, Route, Switch } from "react-router-dom"
-import Home from './components/home';
-import Tester from './components/tester';
-import Login from "./components/login/login";
-import signup from "./components/login/signup";
-import './App.css';
-import Camera from './components/tester/camera';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import "./App.css";
+import Home from "./components/Home/Home";
+import Tester from "./components/Tester/Tester";
+import Camera from "./components/camera/camera";
+import ConcernedDoctor from "./components/Tester/concerneddoctor";
+import Precautions from "./components/Tester/precautions";
+import QuickRemedies from "./components/Tester/quickremedies";
 
-const App =() => (
-  // <Camera />
+const App = () => (
+  //  < Camera />
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Login} />
-      <Route path="/createaccount" component={signup} />
-      <Route exact path="/home" component={Home} />
-      <Route path="/cam" component={Tester} />
+      {/* <Route exact path="/" component={Login} />
+      <Route path="/createaccount" component={signup} /> */}
+      <Route exact path="/" component={Home} />
+      <Route exact path="/tester" component={Tester} />
+      <Route exact path="/camera" component={Camera} />
+      <Route exact path="/concerneddoctor" component={ConcernedDoctor} />
+      <Route exact path="/remedies" component={QuickRemedies} />
+      <Route exact path="/precautions" component={Precautions} />
     </Switch>
   </BrowserRouter>
-
-)
+);
 export default App;

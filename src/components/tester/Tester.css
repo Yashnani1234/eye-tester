@@ -1,0 +1,44 @@
+.tester-main-container {
+    margin: 10px;
+    background-color: bisque;
+    height: 100vh;
+    background-size: cover;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.tester-precautions {
+    color: rgb(57, 33, 33);
+}
+
+.click-button {
+    padding: 5px;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+    border-radius: 3vmin;
+    border-style: groove;
+    border-color: rgb(214, 214, 255);
+    background-color: transparent;
+}
+
+.other-options {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.other-options button{
+    margin: 1%;
+    padding: 2%;
+    padding-left: 5vmin;
+    padding-right: 5vmin;
+    border-radius: 3vmin;
+    background-color: transparent;
+}
+
+
+
+

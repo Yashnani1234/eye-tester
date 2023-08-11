@@ -37,28 +37,27 @@ function Login(){
     };
     return (
       <div className='maincontainer'>
-      <h2 className='heading'><strong>OculaScanner</strong></h2>
-      
-      <div className='d-flex justify-content-center align-items-center  vh-100' >
-          <div className='bg-white p-3 rounded w-25'>
-          <h2><strong> Login</strong></h2>
-            <form action='' onSubmit={submitHandler}>
-              <div className='mb-3'>
+        <h2 className='heading'><strong>OculaScanner</strong></h2>
+      <div className='subcontainer'>
+        <div className='loginbox' >
+              <h2><strong> Login</strong></h2>
+              <form action='' onSubmit={submitHandler}>
+                <div className='input'>
                   <label htmlFor='username'><strong>Username</strong></label>
-                  <input type="text"  className='form-control rounded0' name='username' placeholder='Enter username' value={username} onChange={changeHandler} />
+                  <input type="text"   name='username' placeholder='Enter username' value={username} onChange={changeHandler} />
+                </div>
                   {errors.username && <span className='text-danger'>{errors.username}</span>}
+                <div className='input'>
+                  <label htmlFor='password'><strong>Password</strong></label>
+                  <input type="password" placeholder='Enter password'  name='password' value={password} onChange={changeHandler}/>
+                </div>
+                  {errors.password && <span className='text-danger'>{errors.password}</span>}
+                  <button type='submit' className='loginbutton'  onClick={submitHandler}><strong>Login</strong></button>
+                  <p>create account if you are a new user</p>
+                   <Link to='/createaccount' ><strong>createaccount</strong></Link> 
+              </form>
               </div>
-              <div className='mb-3'>
-                 <label htmlFor='password'><strong>Password</strong></label>
-                 <input type="password" placeholder='Enter password' className='form-control rounded0' name='password' value={password} onChange={changeHandler}/>
-                 {errors.password && <span className='text-danger'>{errors.password}</span>}
-              </div>
-                <button type='submit' className='btn btn-success w-100 rounded-0' onSubmit={submitHandler}><strong>Login</strong></button>
-                <p>create account if you are a new user</p>
-                <Link to='/createaccount' className='btn btn-default border w-100 bg-light rounded-0'><strong>createaccount</strong></Link>
-            </form>
-            </div>
-      </div>
+          </div>
       </div>
     )
   }

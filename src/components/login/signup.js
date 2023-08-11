@@ -92,7 +92,7 @@ function Signup() {
           <button
             type="submit"
             className="btn btn-success w-100 rounded-0"
-            //onSubmit={submitHandler}
+            onSubmit={submitHandler}
           >
             <strong>signup</strong>
           </button>

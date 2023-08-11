@@ -1,0 +1,48 @@
+.Camera {
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.camsub {
+  position: relative;
+  text-align: center;
+  width: 60vw;
+}
+.result {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.result.hasPhoto {
+  left: 0;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+.snap-button {
+  padding: 8px 16px;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 3vmin;
+}
+.back-button-camera
+{
+  padding: 8px 16px;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 3vmin;
+
+}

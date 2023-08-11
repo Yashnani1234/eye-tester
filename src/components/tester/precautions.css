@@ -1,0 +1,19 @@
+.precautions-main-container {
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .back-button-precautions {
+    padding: 8px 16px;
+    background-color: transparent;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 1%;
+    cursor: pointer;
+    border-radius: 3vmin;
+  }
+  

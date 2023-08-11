@@ -1,5 +1,5 @@
 import { Component } from "react";
-import './index.css';
+import './Home.css';
 class Home extends Component {
   state = {check:false,check1:false,check2:false,agree:false}
 
@@ -26,7 +26,7 @@ class Home extends Component {
   nextButton = () => {
     const {history} = this.props
     this.setState({check1:false,check2:false,agree:false})
-    history.replace('/cam');
+    history.replace('/tester');
   }
 
   render() {
@@ -34,11 +34,11 @@ class Home extends Component {
     console.log("rendered")
     return (
       <>
-      <div className='main-container'>
-        <h1 className='main-heading'>Eye Tester</h1>
-        <div className='diseases-container'>
-          <h1 className='heading'>Diseases can be found</h1>
-          <ol className='diseases'>
+      <div className='home-main-container'>
+        <h1 className='home-main-heading'>OCCULA SCANNER<br/>(detect & protect)</h1>
+        <div className='home-diseases-container'>
+          <h1 className='diseases-heading'>Diseases can be found</h1>
+          <ol className='diseases-list'>
             <li>    Aneurysm</li>
             <li>    Brain Tumor</li>
             <li>    Blood,tissue cancers</li>
@@ -59,20 +59,18 @@ class Home extends Component {
             <li>    Vitamin A deficiency</li>
           </ol>
         </div>
-        <div className='diseases-container'>
-            <h1 className='heading'>terms and conditions</h1>
-            <div className="terms">
-              <input type="checkbox" checked={check1} onChange={this.onCheck1} />
-              <p>i accept</p>
+        <div className='home-tc'>
+            <h1 className='tc-heading'>Terms and Conditions</h1>
+            <div className="home-checkbox">
+              <input type="checkbox" checked={check1} onChange={this.onCheck1} /> I accept
             </div>
-            <div className="terms">
-              <input type="checkbox" checked={check2} onChange={this.onCheck2} />
-              <p>i follow</p>
+            <div className="home-checkbox">
+              <input type="checkbox" checked={check2} onChange={this.onCheck2} /> I follow
             </div>
           </div>
-          <div>
-          {check ? <button onClick={this.agreeButton}>Agree</button> : <p>Agree</p>}
-          {agree ? <button onClick={this.nextButton}>Next</button> : null}
+          <div className="buttons-container">
+            {check ? <button className="home-button" onClick={this.agreeButton}>Agree</button> : " "}
+            {agree ? <button className="home-button" onClick={this.nextButton}>Next</button> : null}
           </div>
       </div>
       </>
